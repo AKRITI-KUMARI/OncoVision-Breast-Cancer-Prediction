@@ -3,10 +3,6 @@
         <h1>🩺 OncoVision: Breast Cancer Prediction System</h1>
         <h2>Overview</h2>
         <p class="animated">Welcome to the <b>Breast Cancer Prediction System</b>, a comprehensive web application that predicts whether a tumor is <b>Malignant</b> or <b>Benign</b> based on user input. This system uses advanced machine learning algorithms and presents results interactively through visual representations like <b>Pie Charts</b> and a user-friendly interface.</p>
-        <h3>Malignant vs. Benign Prediction (%)</h3>
-        <img src="https://i.ibb.co/XSxpdbF/Screenshot-2024-09-21-153659.png" alt="Malignant vs Benign Pie Chart" />
-        <h2>🤖 MammoMate - AI Chatbot</h2>
-        <p class="animated">Introducing <b>MammoMate</b>, your AI-powered assistant to answer all breast cancer-related questions. MammoMate is designed to provide you with helpful information, clarify doubts, and offer guidance through personalized interactions.</p>
         <h2>✨ Key Features</h2>
         <ul>
             <li>Frontend: Home Page, About Page, Predictor Page, User Dashboard, Registration Page, Login Page, Recommendation Page, Subscription for Newsletters (via Email)</li>
