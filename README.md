@@ -1,7 +1,6 @@
 <body>
     <div class="container">
-        <h1>🩺 Breast Cancer Prediction System</h1>
-        <img src="https://i.ibb.co/HXRZfyM/Screenshot-2024-09-21-153131.png" alt="Breast Cancer Detection">
+        <h1>🩺 OncoVision: Breast Cancer Prediction System</h1>
         <h2>Overview</h2>
         <p class="animated">Welcome to the <b>Breast Cancer Prediction System</b>, a comprehensive web application that predicts whether a tumor is <b>Malignant</b> or <b>Benign</b> based on user input. This system uses advanced machine learning algorithms and presents results interactively through visual representations like <b>Pie Charts</b> and a user-friendly interface.</p>
         <h3>Malignant vs. Benign Prediction (%)</h3>
