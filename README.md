@@ -5,37 +5,14 @@
         <p class="animated">Welcome to the <b>Breast Cancer Prediction System</b>, a comprehensive web application that predicts whether a tumor is <b>Malignant</b> or <b>Benign</b> based on user input. This system uses advanced machine learning algorithms and presents results interactively through visual representations like <b>Pie Charts</b> and a user-friendly interface.</p>
         <h3>Malignant vs. Benign Prediction (%)</h3>
         <img src="https://i.ibb.co/XSxpdbF/Screenshot-2024-09-21-153659.png" alt="Malignant vs Benign Pie Chart" />
-          <!-- Chatbot section -->
         <h2>🤖 MammoMate - AI Chatbot</h2>
         <p class="animated">Introducing <b>MammoMate</b>, your AI-powered assistant to answer all breast cancer-related questions. MammoMate is designed to provide you with helpful information, clarify doubts, and offer guidance through personalized interactions.</p>
-        <img src="https://i.ibb.co/sqWDFtM/Screenshot-2024-09-21-160537.png" height=450 alt="MammoMate Chatbot">
-      <!-- YouTube video section -->
-        <h2>📽️ How Does This Work?</h2>
-        <p class="animated">Watch the video below to see how this breast cancer prediction system works.</p>
-          Video Link:(https://youtu.be/EyUxRbKOjsU)
         <h2>✨ Key Features</h2>
         <ul>
-            <li>Frontend: Home Page, About Page, Predictor Page, Registration Page, Login Page, Recommendation Page, Subscription for Newsletters (via Email)</li>
+            <li>Frontend: Home Page, About Page, Predictor Page, User Dashboard, Registration Page, Login Page, Recommendation Page, Subscription for Newsletters (via Email)</li>
             <li>Backend: Flask for seamless web service operations, integration of machine learning models for real-time prediction</li>
             <li>Chatbot: <b>MammoMate</b>, the AI-powered chatbot for breast cancer-related queries</li>
         </ul>
-        <h2>🖼️ Page Previews</h2>
-        <table>
-            <tr>
-                <th>Home Page</th>
-                <th>About Page</th>
-                <th>Predictor Page</th>
-                <th>Recommandains</th> 
-                <th>Log In interface</th>
-            </tr>
-            <tr>
-                <td><img src="https://i.ibb.co/Qn36v7P/Screenshot-2024-09-21-153953.png" alt="Home Page"></td>
-                <td><img src="https://i.ibb.co/SKR01Zk/Screenshot-2024-09-21-154705.png" alt="About Page"></td>
-                <td><img src="https://i.ibb.co/rypKnZk/Screenshot-358.png" alt="Screenshot-358" alt="Predictor Page"></td>
-                <td><img src="https://i.ibb.co/b2NNNhm/Screenshot-2024-09-21-155036.png" alt="Recommandains"></td>
-               <td><img src="https://i.ibb.co/MSRY3ps/Screenshot-2024-09-21-154215.png" alt="user"><</td>
-            </tr>
-        </table>
         <h2>💻 Frontend Tech Stack</h2>
         <ul>
             <li>HTML5/CSS3/JavaScript</li>
@@ -48,6 +25,7 @@
             <li><b>Home Page:</b> The homepage introduces the application with seamless animations and navigations.</li>
             <li><b>About Page:</b> Information about breast cancer and its early detection methods.</li>
             <li><b>Predictor Page:</b> An interactive user input form for prediction with live result visualization.</li>
+            <li><b>User Dashboard:</b> A dashboard for users to view their prediction history and other details.</li>
             <li><b>MammoMate:</b> The chatbot provides interactive AI-based responses to breast cancer-related queries.</li>
             <li><b>Registration/Login:</b> Users can register and log in for personalized experience.</li>
             <li><b>Subscription Section:</b> Users who subscribe receive periodic newsletters via email about the latest in breast cancer research and treatment.</li>
@@ -73,40 +51,16 @@
             <li>Matplotlib for backend visualizations</li>
         </ul>
         <p>The model was trained on historical breast cancer datasets to predict malignant or benign outcomes based on medical parameters such as Area Worst, Concave Points Worst, Radius Worst, and more. Predictions are served via Flask, and the result is displayed in a pie chart showing the percentage distribution of Malignant vs Benign predictions.</p>
-        <h2>🛠️ Tech Stack Summary</h2>
-        <table>
-            <tr>
-                <th>Frontend</th>
-                <th>Backend</th>
-                <th>Data Science</th>
-            </tr>
-            <tr>
-                <td>HTML5, CSS3, JS, Bootstrap</td>
-                <td>Flask, Python</td>
-                <td>Pandas, NumPy</td>
-            </tr>
-            <tr>
-                <td>GSAP, Locomotive Scroll</td>
-                <td>Jinja Templating</td>
-                <td>scikit-learn, TensorFlow</td>
-            </tr>
-            <tr>
-                <td>Chart.js for Data Viz</td>
-                <td>REST API, Flask-Mail</td>
-                <td>Keras</td>
-            </tr>
-        </table> 
         <h2>📬 Email Subscription System</h2>
-        <p>If users subscribe by entering their email address on the homepage:</p>
+        <p>If users subscribe by entering their email address on our website:</p>
         <ul>
             <li>They will receive a confirmation email.</li>
             <li>Periodic newsletters will be sent regarding updates in breast cancer research and treatment options.</li>
-            <img src="https://i.ibb.co/0JHKbkj/Screenshot-2024-09-21-162044.png" alt="Email Subscription">
         </ul> 
         <h2>📁 Project Structure</h2>
        <pre>
  AI-Treatment-with-Breast-Cancer/
-├── techSnakes/                      
+├── OncoVision/                      
 │   ├── app.py                    
 │   ├── requirements.txt          
 │   └── model/                    
@@ -115,14 +69,14 @@
     ├── templates/                     
 │       ├── home.html                
 │       ├── about.html
+        ├── dashboard.html
 │       ├── howitworks.html
 │       ├── login.html
 │       ├── predictor.html
-│       ├── recommendation.html
-│       ├── register.html       
-│       └── user.html               
+│       ├── recommendations.html     
+│       └── register.html
     ├── instance                     
-│       └── user.db
+│       └── users.db
 ├── data/                         
 │   ├── BCP - Logistic Regression.ipynb
 │   └── ML Project with Logistic Regression.ipynb      
@@ -142,42 +96,5 @@
             <li>Run the Flask application:
                 <pre><code>python app.py</code></pre>
             </li>
-            <li>Access the application at:
-                <pre><code>
-Mobile: http://107.22.25.169:8080/
-Desktop : http://ec2-107-22-25-169.compute-1.amazonaws.com:8080/
-</code></pre>
-            </li>
-          <li>Deploy on AWS Cloud (EC2 Instance):
-    <pre><code>
-    1. Launch an EC2 instance:
-       - Choose ubuntu 22.02 LTS AMI (HVM), SSD Volume Type.
-       - Select an instance type (t2.micro for free tier).
-       - Configure security group to allow HTTP (port 80) and SSH (port 22).
-    2. Connect to your EC2 instance using SSH:
-       ssh -i your-key.pem ec2-user@<your-ec2-public-ip>
-    3. Install necessary packages:
-       sudo yum update -y
-       sudo yum install python3-pip git -y
-    4. Clone your project repository:
-       git clone <your-repo-url>
-       cd <your-project-directory>
-    5. Install required Python libraries:
-       pip3 install -r requirements.txt
-    6. Run the Flask application:
-       python3 app.py
-    7. Configure EC2 security group to allow traffic on port 5000 (if running Flask on default port).
-    8. Access your application via:
-       http://<your-ec2-public-ip>:5000
-    </code></pre>
         </ol>
-        <h2>🧑‍💻 Contributing</h2>
-        <p>We welcome contributions from the community. If you'd like to improve or add new features, feel free to fork the repo and submit a pull request.</p>
-        <h2>📜 License</h2>
-        <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
-    </div>
-    <div class="footer">
-        © 2025 Breast Cancer Prediction System
-    </div>
 </body>
-</html>
