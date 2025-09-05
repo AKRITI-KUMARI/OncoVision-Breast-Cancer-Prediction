@@ -7,7 +7,8 @@ import smtplib
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import os
-from datetime import datetime
+from datetime import datetime, timezone
+import pytz
 
 load_dotenv()
 
@@ -50,8 +51,11 @@ class PredictionHistory(db.Model):
     prediction = db.Column(db.String(50), nullable=False)  # "Benign" or "Malignant"
     benign_percentage = db.Column(db.Float, nullable=False)
     malignant_percentage = db.Column(db.Float, nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
-
+    utc_time = datetime.now(timezone.utc)
+    # Convert to IST (India Standard Time)
+    ist = pytz.timezone("Asia/Kolkata")
+    local_time = utc_time.astimezone(ist)
+    date_created = db.Column(db.DateTime, default=local_time)
     user = db.relationship('User', backref='predictions')
 
     def to_dict(self):
@@ -243,6 +247,7 @@ def get_predictions():
         preds = (PredictionHistory.query
                  .filter_by(user_id=session['user_id'])
                  .order_by(PredictionHistory.date_created.desc())
+                 .limit(5)
                  .all())
 
         return jsonify([p.to_dict() for p in preds])
