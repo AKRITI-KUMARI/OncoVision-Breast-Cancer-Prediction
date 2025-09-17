@@ -3,9 +3,6 @@
         <h1>🩺 OnvoVision - Breast Cancer Prediction System</h1>
         <h2>Overview</h2>
         <p class="animated">Welcome to the <b>Breast Cancer Prediction System</b>, a comprehensive web application that predicts whether a tumor is <b>Malignant</b> or <b>Benign</b> based on user input. This system uses advanced machine learning algorithms and presents results interactively through visual representations like <b>Pie Charts</b> and a user-friendly interface.</p>
-        <h3>Malignant vs. Benign Prediction (%)</h3>
-        <img src="https://i.ibb.co/XSxpdbF/Screenshot-2024-09-21-153659.png" alt="Malignant vs Benign Pie Chart" />
-          <!-- Chatbot section -->
         <h2>✨ Key Features</h2>
         <ul>
             <li>Frontend: Home Page, About Page, Predictor Page, Registration Page, Login Page, User Dashboard, Recommendation Page, Subscription for Newsletters (via Email)</li>
@@ -50,29 +47,6 @@
             <li>Matplotlib for backend visualizations</li>
         </ul>
         <p>The model was trained on historical breast cancer datasets to predict malignant or benign outcomes based on medical parameters such as Area Worst, Concave Points Worst, Radius Worst, and more. Predictions are served via Flask, and the result is displayed in a pie chart showing the percentage distribution of Malignant vs Benign predictions.</p>
-        <h2>🛠️ Tech Stack Summary</h2>
-        <table>
-            <tr>
-                <th>Frontend</th>
-                <th>Backend</th>
-                <th>Data Science</th>
-            </tr>
-            <tr>
-                <td>HTML5, CSS3, JS, Bootstrap</td>
-                <td>Flask, Python</td>
-                <td>Pandas, NumPy</td>
-            </tr>
-            <tr>
-                <td>GSAP, Locomotive Scroll</td>
-                <td>Jinja Templating</td>
-                <td>scikit-learn, TensorFlow</td>
-            </tr>
-            <tr>
-                <td>Chart.js for Data Viz</td>
-                <td>REST API, Flask-Mail</td>
-                <td>Keras</td>
-            </tr>
-        </table> 
         <h2>📬 Email Subscription System</h2>
         <p>If users subscribe by entering their email address on the homepage:</p>
         <ul>
@@ -86,9 +60,10 @@
 │   ├── app.py                    
 │   ├── requirements.txt          
 │   └── model/                    
-│       ├── logistic_regression_model.pkl  
+│       ├── model.pkl  
 │       └── scalar.pkl
-    ├── templates/                     
+|   ├── static/images
+|   ├── templates/                     
 │       ├── home.html                
 │       ├── about.html
 │       ├── howitworks.html
@@ -96,9 +71,9 @@
 │       ├── predictor.html
 │       ├── recommendation.html
 │       ├── register.html       
-│       └── user_dashboard.html               
-    ├── instance                     
-│       └── user.db
+│       └── dashboard.html               
+|   ├── instance                     
+│       └── users.db
 ├── data/                         
 │   ├── BCP - Logistic Regression.ipynb
 │   └── ML Project with Logistic Regression.ipynb                           
